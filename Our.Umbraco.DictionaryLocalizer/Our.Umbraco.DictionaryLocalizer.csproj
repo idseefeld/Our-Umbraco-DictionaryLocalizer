@@ -10,7 +10,6 @@ Languages icons created by Freepik - Flaticon, https://www.flaticon.com/free-ico
 		<PackageTags>umbraco-marketplace;localization;DataAnnotations</PackageTags>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<PackageProjectUrl>https://github.com/idseefeld/Our-Umbraco-DictionaryLocalizer</PackageProjectUrl>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/idseefeld/Our-Umbraco-DictionaryLocalizer</RepositoryUrl>
@@ -18,6 +17,7 @@ Languages icons created by Freepik - Flaticon, https://www.flaticon.com/free-ico
 		<PackageIcon>languages.png</PackageIcon>
 		<RepositoryType>git</RepositoryType>
 		<Copyright>Copyright (c) 2022, Dirk Seefeld</Copyright>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Remove="buildTransitive\**" />
@@ -26,6 +26,10 @@ Languages icons created by Freepik - Flaticon, https://www.flaticon.com/free-ico
 	</ItemGroup>
 	<ItemGroup>
 	  <None Include="..\languages.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\LICENSE.txt">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
