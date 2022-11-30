@@ -1,0 +1,21 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <OurUmbracoDictionaryLocalizerContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\Our.Umbraco.DictionaryLocalizer\**\*.*</OurUmbracoDictionaryLocalizerContentFilesPath>
+  </PropertyGroup>
+
+  <Target Name="CopyOurUmbracoDictionaryLocalizerAssets" BeforeTargets="Build">
+    <ItemGroup>
+      <OurUmbracoDictionaryLocalizerContentFiles Include="$(OurUmbracoDictionaryLocalizerContentFilesPath)" />
+    </ItemGroup>
+    <Message Text="Copying Our.Umbraco.DictionaryLocalizer files: $(OurUmbracoDictionaryLocalizerContentFilesPath) - #@(OurUmbracoDictionaryLocalizerContentFiles->Count()) files" Importance="high" />
+    <Copy SourceFiles="@(OurUmbracoDictionaryLocalizerContentFiles)" DestinationFiles="@(OurUmbracoDictionaryLocalizerContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Our.Umbraco.DictionaryLocalizer\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="ClearOurUmbracoDictionaryLocalizerAssets" BeforeTargets="Clean">
+    <ItemGroup>
+      <OurUmbracoDictionaryLocalizerDir Include="$(MSBuildProjectDirectory)\App_Plugins\Our.Umbraco.DictionaryLocalizer\" />
+    </ItemGroup>
+    <Message Text="Clear old Our.Umbraco.DictionaryLocalizer data" Importance="high" />
+    <RemoveDir Directories="@(OurUmbracoDictionaryLocalizerDir)" />
+  </Target>
+</Project>
