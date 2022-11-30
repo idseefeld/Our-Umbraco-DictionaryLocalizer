@@ -6,6 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.DictionaryLocalizer", "Our.Umbraco.DictionaryLocalizer\Our.Umbraco.DictionaryLocalizer.csproj", "{23A2DFFC-EB2C-4199-95EE-27D0C7BD8CE0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{815D2E18-EC3F-41CA-B700-07D79D56D2A8}"
+	ProjectSection(SolutionItems) = preProject
+		languages.png = languages.png
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

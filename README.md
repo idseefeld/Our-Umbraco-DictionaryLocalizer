@@ -20,3 +20,5 @@ public class MyModel
 ```
 
 In Back-Office section Translations add items: nameLabel, emailLabel, nameRequired, emailInvalid etc.
+
+[Languages icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/languages)

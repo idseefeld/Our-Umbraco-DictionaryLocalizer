@@ -5,22 +5,38 @@
 		<Product>Our.Umbraco.DictionaryLocalizer</Product>
 		<PackageId>Our.Umbraco.DictionaryLocalizer</PackageId>
 		<Title>Our.Umbraco.DictionaryLocalizer</Title>
-		<Description>Add Umbraco-Dictionary based localization for e. g. models DataAnnotations.</Description>
-		<PackageTags>umbraco package</PackageTags>
+		<Description>Add Umbraco-Dictionary based localization for e. g. models DataAnnotations. 
+Languages icons created by Freepik - Flaticon, https://www.flaticon.com/free-icons/language</Description>
+		<PackageTags>umbraco-marketplace;localization;DataAnnotations</PackageTags>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<PackageProjectUrl>https://github.com/idseefeld/Our-Umbraco-DictionaryLocalizer</PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/idseefeld/Our-Umbraco-DictionaryLocalizer</RepositoryUrl>
+		<Authors>Dirk Seefeld</Authors>
+		<PackageIcon>languages.png</PackageIcon>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Remove="buildTransitive\**" />
 	  <EmbeddedResource Remove="buildTransitive\**" />
 	  <None Remove="buildTransitive\**" />
 	</ItemGroup>
+	<ItemGroup>
+	  <None Include="..\languages.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
-		<PackageReference Include="Umbraco.Cms.Core" Version="10.3.2" />
-		<PackageReference Include="Umbraco.Cms.Web.Website" Version="10.3.2" />
+		<PackageReference Include="Umbraco.Cms.Core" Version="10.0.0" />
+		<PackageReference Include="Umbraco.Cms.Web.Website" Version="10.0.0" />
 	</ItemGroup>
 
 	<!--<ItemGroup>
