@@ -17,6 +17,7 @@ Languages icons created by Freepik - Flaticon, https://www.flaticon.com/free-ico
 		<Authors>Dirk Seefeld</Authors>
 		<PackageIcon>languages.png</PackageIcon>
 		<RepositoryType>git</RepositoryType>
+		<Copyright>Copyright (c) 2022, Dirk Seefeld</Copyright>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Remove="buildTransitive\**" />
