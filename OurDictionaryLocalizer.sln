@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.DictionaryLocal
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{815D2E18-EC3F-41CA-B700-07D79D56D2A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.DictionaryLocalizer.Website", "Our.Umbraco.DictionaryLocalizer.Website\Our.Umbraco.DictionaryLocalizer.Website.csproj", "{082C2662-2B9A-4CF3-87C0-94FC4925C167}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,10 +17,6 @@ Global
 		{23A2DFFC-EB2C-4199-95EE-27D0C7BD8CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23A2DFFC-EB2C-4199-95EE-27D0C7BD8CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23A2DFFC-EB2C-4199-95EE-27D0C7BD8CE0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{082C2662-2B9A-4CF3-87C0-94FC4925C167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{082C2662-2B9A-4CF3-87C0-94FC4925C167}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{082C2662-2B9A-4CF3-87C0-94FC4925C167}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{082C2662-2B9A-4CF3-87C0-94FC4925C167}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
