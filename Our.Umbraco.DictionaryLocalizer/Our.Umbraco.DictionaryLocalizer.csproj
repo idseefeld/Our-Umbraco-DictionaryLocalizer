@@ -1,20 +1,29 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ContentTargetFolders>.</ContentTargetFolders>
-    <Product>Our.Umbraco.DictionaryLocalizer</Product>
-    <PackageId>Our.Umbraco.DictionaryLocalizer</PackageId>
-    <Title>Our.Umbraco.DictionaryLocalizer</Title>
-    <Description>...</Description>
-    <PackageTags>umbraco plugin package</PackageTags>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ContentTargetFolders>.</ContentTargetFolders>
+		<Product>Our.Umbraco.DictionaryLocalizer</Product>
+		<PackageId>Our.Umbraco.DictionaryLocalizer</PackageId>
+		<Title>Our.Umbraco.DictionaryLocalizer</Title>
+		<Description>Add Umbraco-Dictionary based localization for e. g. models DataAnnotations.</Description>
+		<PackageTags>umbraco package</PackageTags>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageProjectUrl>https://github.com/idseefeld/Our-Umbraco-DictionaryLocalizer</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Remove="buildTransitive\**" />
+	  <EmbeddedResource Remove="buildTransitive\**" />
+	  <None Remove="buildTransitive\**" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.3.2" />
-    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.3.2" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+		<PackageReference Include="Umbraco.Cms.Core" Version="10.3.2" />
+		<PackageReference Include="Umbraco.Cms.Web.Website" Version="10.3.2" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
-  </ItemGroup>
+	<!--<ItemGroup>
+		<None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
+	</ItemGroup>-->
 </Project>
