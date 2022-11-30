@@ -16,6 +16,7 @@ Languages icons created by Freepik - Flaticon, https://www.flaticon.com/free-ico
 		<RepositoryUrl>https://github.com/idseefeld/Our-Umbraco-DictionaryLocalizer</RepositoryUrl>
 		<Authors>Dirk Seefeld</Authors>
 		<PackageIcon>languages.png</PackageIcon>
+		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Remove="buildTransitive\**" />
