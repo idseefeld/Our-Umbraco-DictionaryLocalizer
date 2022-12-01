@@ -477,4 +477,5 @@ appsettings-schema.*.json
 
 # Media files
 /wwwroot/media/
-/Umbraco11.Website/umbraco/Data/TEMP
+*/umbraco/Data/TEMP
+/Umbraco11.Website/appsettings.Development.json
