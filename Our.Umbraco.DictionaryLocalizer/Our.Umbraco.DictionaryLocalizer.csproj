@@ -20,8 +20,8 @@ Languages icons created by Freepik - Flaticon, https://www.flaticon.com/free-ico
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<AssemblyVersion>1.0.1</AssemblyVersion>
 		<FileVersion>1.0.1</FileVersion>
-		<Version>1.0.1</Version>
-		<PackageReleaseNotes>Remove unused dependencies.</PackageReleaseNotes>
+		<Version>1.0.2</Version>
+		<PackageReleaseNotes>Full support in Umbarco version 10.1.0. Previous version ignore [Display(Name="#nameLabel")]</PackageReleaseNotes>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Remove="buildTransitive\**" />
@@ -44,7 +44,7 @@ Languages icons created by Freepik - Flaticon, https://www.flaticon.com/free-ico
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Umbraco.Cms.Web.Website" Version="10.0.0" />
+		<PackageReference Include="Umbraco.Cms.Web.Website" Version="10.1.0" />
 	</ItemGroup>
 
 	<!--<ItemGroup>
