@@ -18,6 +18,10 @@ Languages icons created by Freepik - Flaticon, https://www.flaticon.com/free-ico
 		<RepositoryType>git</RepositoryType>
 		<Copyright>Copyright (c) 2022, Dirk Seefeld</Copyright>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<AssemblyVersion>1.0.1</AssemblyVersion>
+		<FileVersion>1.0.1</FileVersion>
+		<Version>1.0.1</Version>
+		<PackageReleaseNotes>Remove unused dependencies.</PackageReleaseNotes>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Remove="buildTransitive\**" />
@@ -40,8 +44,6 @@ Languages icons created by Freepik - Flaticon, https://www.flaticon.com/free-ico
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
-		<PackageReference Include="Umbraco.Cms.Core" Version="10.0.0" />
 		<PackageReference Include="Umbraco.Cms.Web.Website" Version="10.0.0" />
 	</ItemGroup>
 
