@@ -1,6 +1,6 @@
-using Umbraco10.Models;
+using Umbraco10.Website.Models;
 
-namespace Umbraco10
+namespace Umbraco10.Website
 {
     public class Startup
     {

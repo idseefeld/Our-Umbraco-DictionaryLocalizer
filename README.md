@@ -1,4 +1,5 @@
 # Our.Umbraco.DictionaryLocalizerPackage
+
 This package adds Umbraco-dictionary based localisation e. g. models DataAnnotations.
 
 Just prefix the name or error message with: #
@@ -20,5 +21,11 @@ public class MyModel
 ```
 
 In Back-Office section Translations add items: nameLabel, emailLabel, nameRequired, emailInvalid etc.
+
+## Umbraco version 10.x issue
+
+For version 10.x the localizer will only work for ModelsBuilder generated models. Otherwise the `[Dislpay(Name = "#nameLabel")]` translations will not work. This issue seems to be fixed in version 11.
+
+You find two projects `Umbraco10.Website` and `Umbraco11.Website` showing a simple form in two languages.
 
 [Languages icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/languages)

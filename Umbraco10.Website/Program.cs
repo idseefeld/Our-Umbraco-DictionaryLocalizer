@@ -1,4 +1,4 @@
-namespace Umbraco10
+namespace Umbraco10.Website
 {
     public class Program
     {
