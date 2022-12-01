@@ -1,0 +1,16 @@
+﻿@using Umbraco.Cms.Core.PublishedCache;
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.SimplePage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "Master.cshtml";
+}
+<div class="container-fluid">
+
+    <div class="standard">
+
+        @Model.Value("mainBody")
+
+    </div>
+
+</div>
