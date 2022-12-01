@@ -1,3 +1,5 @@
+using Umbraco10.Models;
+
 namespace Umbraco10
 {
     public class Startup
@@ -29,6 +31,8 @@ namespace Umbraco10
         /// </remarks>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<ContactMailOptions>(_config.GetSection(ContactMailOptions.ContactMail));
+
             services.AddUmbraco(_env, _config)
                 .AddBackOffice()
                 .AddWebsite()

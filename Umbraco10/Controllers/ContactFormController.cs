@@ -72,8 +72,7 @@ namespace Umbraco10.Controllers
                 var useSsl = smtpSettings.SecureSocketOptions.ToString() == SecureSocketOptions.SslOnConnect.ToString();
                 client.Connect(smtpSettings.Host, smtpSettings.Port, useSsl);
 
-                // Note: only needed if the SMTP server requires authentication
-                client.Authenticate("uaas.admin@idseefeld.de", "ujr&epj_frb4gxj-NER");
+                client.Authenticate(smtpSettings.Username, smtpSettings.Password);
 
                 client.Send(message);
                 client.Disconnect(true);

@@ -1,9 +1,8 @@
-﻿using Our.Umbraco.DictionaryLocalizer.Models;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Umbraco11.Website.Models
 {
-    public class ContactFormModel : DictionaryDataAnnotationBaseModel
+    public class ContactFormModel : Our.Umbraco.DictionaryLocalizer.Models.DictionaryDataAnnotationBaseModel
     {
         [Required(ErrorMessage = "#RequiredErrorMessage.name")]
         [Display(Name = "#nameLabel")]
