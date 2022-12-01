@@ -69,10 +69,20 @@ namespace Umbraco11.Website.Controllers
 
             using (var client = new SmtpClient())
             {
-                var useSsl = smtpSettings.SecureSocketOptions.ToString() == SecureSocketOptions.SslOnConnect.ToString();
-                client.Connect(smtpSettings.Host, smtpSettings.Port, useSsl);
+                if (smtpSettings.Port > 0)
+                {
+                    var useSsl = smtpSettings.SecureSocketOptions.ToString() == SecureSocketOptions.SslOnConnect.ToString();
+                    client.Connect(smtpSettings.Host, smtpSettings.Port, useSsl);
+                }
+                else
+                {
+                    client.Connect(smtpSettings.Host);
+                }
 
-                client.Authenticate(smtpSettings.Username, smtpSettings.Password);
+                if (!string.IsNullOrWhiteSpace(smtpSettings.Username))
+                {
+                    client.Authenticate(smtpSettings.Username, smtpSettings.Password);
+                }
 
                 client.Send(message);
                 client.Disconnect(true);

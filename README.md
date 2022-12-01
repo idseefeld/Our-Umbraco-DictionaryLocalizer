@@ -26,6 +26,6 @@ In Back-Office section Translations add items: nameLabel, emailLabel, nameRequir
 
 For version 10.x the localizer will only work for ModelsBuilder generated models. Otherwise the `[Dislpay(Name = "#nameLabel")]` translations will not work. This issue seems to be fixed in version 11.
 
-You find two projects `Umbraco10.Website` and `Umbraco11.Website` showing a simple form in two languages.
+You find two projects `Umbraco10.Website` and `Umbraco11.Website` showing a simple form in two languages. Open solution `OurDictionaryLocalizerWebiste.sln`, select one .Website and run Debug command. The interesting part is in `Models\ContactFormModel.cs`.
 
 [Languages icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/languages)
