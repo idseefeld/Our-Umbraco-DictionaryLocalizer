@@ -479,3 +479,5 @@ appsettings-schema.*.json
 /wwwroot/media/
 */umbraco/Data/TEMP
 
+Umbraco.sqlite.db-shm
+Umbraco.sqlite.db-wal
