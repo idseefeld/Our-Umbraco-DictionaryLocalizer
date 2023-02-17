@@ -1,4 +1,4 @@
-﻿namespace Umbraco10.Website.Models
+﻿namespace Umbraco10.Core.Models
 {
     public class ContactMailOptions
     {

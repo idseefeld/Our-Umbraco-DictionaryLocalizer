@@ -1,4 +1,4 @@
-using Umbraco10.Website.Models;
+using Umbraco10.Core.Models;
 
 namespace Umbraco10.Website
 {

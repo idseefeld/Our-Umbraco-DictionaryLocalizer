@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Umbraco10.Website.Models
+namespace Umbraco10.Core.Models
 {
     public class ContactFormModel : Our.Umbraco.DictionaryLocalizer.Models.DictionaryDataAnnotationBaseModel
     {

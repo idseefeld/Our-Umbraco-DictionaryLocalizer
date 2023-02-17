@@ -12,9 +12,8 @@ using Umbraco.Cms.Core.Web;
 using Umbraco.Cms.Infrastructure.Persistence;
 using Umbraco.Cms.Web.Common.Filters;
 using Umbraco.Cms.Web.Website.Controllers;
-using Umbraco10.Website.Models;
-
-namespace Umbraco10.Website.Controllers
+using Umbraco10.Core.Models;
+namespace Umbraco10.Core.Controllers
 {
     public class ContactFormController : SurfaceController
     {
