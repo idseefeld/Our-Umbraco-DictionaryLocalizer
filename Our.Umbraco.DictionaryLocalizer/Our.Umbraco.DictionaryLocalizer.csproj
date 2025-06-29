@@ -20,7 +20,7 @@ Languages icons created by Freepik - Flaticon, https://www.flaticon.com/free-ico
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <AssemblyVersion>1.0.4</AssemblyVersion>
     <FileVersion>1.0.4</FileVersion>
-    <Version>1.0.4-rc2</Version>
+    <Version>1.0.4</Version>
     <PackageReleaseNotes>Full support in Umbarco version 10.8.11. Previous version ignore [Display(Name="#nameLabel")]</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
