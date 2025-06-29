@@ -1,53 +1,51 @@
-<Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
-		<ContentTargetFolders>.</ContentTargetFolders>
-		<Product>Our.Umbraco.DictionaryLocalizer</Product>
-		<PackageId>Our.Umbraco.DictionaryLocalizer</PackageId>
-		<Title>Our.Umbraco.DictionaryLocalizer</Title>
-		<Description>Add Umbraco-Dictionary based localization for e. g. models DataAnnotations. 
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ContentTargetFolders>.</ContentTargetFolders>
+    <Product>Our.Umbraco.DictionaryLocalizer</Product>
+    <PackageId>Our.Umbraco.DictionaryLocalizer</PackageId>
+    <Title>Our.Umbraco.DictionaryLocalizer</Title>
+    <Description>Add Umbraco-Dictionary based localization for e. g. models DataAnnotations. 
 Languages icons created by Freepik - Flaticon, https://www.flaticon.com/free-icons/language</Description>
-		<PackageTags>umbraco-marketplace;localization;DataAnnotations</PackageTags>
-		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<PackageProjectUrl>https://github.com/idseefeld/Our-Umbraco-DictionaryLocalizer</PackageProjectUrl>
-		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<RepositoryUrl>https://github.com/idseefeld/Our-Umbraco-DictionaryLocalizer</RepositoryUrl>
-		<Authors>Dirk Seefeld</Authors>
-		<PackageIcon>languages.png</PackageIcon>
-		<RepositoryType>git</RepositoryType>
-		<Copyright>Copyright (c) 2022, Dirk Seefeld</Copyright>
-		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-		<AssemblyVersion>1.0.1</AssemblyVersion>
-		<FileVersion>1.0.1</FileVersion>
-		<Version>1.0.3</Version>
-		<PackageReleaseNotes>Full support in Umbarco version 10.1.0. Previous version ignore [Display(Name="#nameLabel")]</PackageReleaseNotes>
-	</PropertyGroup>
-	<ItemGroup>
-	  <Compile Remove="buildTransitive\**" />
-	  <EmbeddedResource Remove="buildTransitive\**" />
-	  <None Remove="buildTransitive\**" />
-	</ItemGroup>
-	<ItemGroup>
-	  <None Include="..\languages.png">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
-	  <None Include="..\LICENSE.txt">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
-	  <None Include="..\README.md">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Umbraco.Cms" Version="10.1.0" />
-	</ItemGroup>
-
-	<!--<ItemGroup>
+    <PackageTags>umbraco-marketplace;localization;DataAnnotations</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/idseefeld/Our-Umbraco-DictionaryLocalizer</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/idseefeld/Our-Umbraco-DictionaryLocalizer</RepositoryUrl>
+    <Authors>Dirk Seefeld</Authors>
+    <PackageIcon>languages.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <Copyright>Copyright (c) 2025, Dirk Seefeld</Copyright>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <AssemblyVersion>1.0.4</AssemblyVersion>
+    <FileVersion>1.0.4</FileVersion>
+    <Version>1.0.4</Version>
+    <PackageReleaseNotes>Full support in Umbarco version 10.8.11. Previous version ignore [Display(Name="#nameLabel")]</PackageReleaseNotes>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="buildTransitive\**" />
+    <EmbeddedResource Remove="buildTransitive\**" />
+    <None Remove="buildTransitive\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\languages.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms" />
+  </ItemGroup>
+  <!--<ItemGroup>
 		<None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
 	</ItemGroup>-->
 </Project>

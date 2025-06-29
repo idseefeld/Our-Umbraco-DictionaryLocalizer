@@ -1,4 +1,4 @@
-# Our.Umbraco.DictionaryLocalizerPackage
+﻿# Our.Umbraco.DictionaryLocalizerPackage
 
 This package adds Umbraco-dictionary based localisation e. g. models DataAnnotations.
 
