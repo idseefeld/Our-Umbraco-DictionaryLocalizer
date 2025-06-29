@@ -1,5 +1,9 @@
 ﻿# Our.Umbraco.DictionaryLocalizerPackage
 
+[![Downloads](https://img.shields.io/nuget/dt/Our.Umbraco.DictionaryLocalizer?color=cc9900)](https://www.nuget.org/packages/Our.Umbraco.DictionaryLocalizer/)
+[![NuGet](https://img.shields.io/nuget/vpre/Our.Umbraco.DictionaryLocalizer?color=0273B3)](https://www.nuget.org/packages/Our.Umbraco.DictionaryLocalizer)
+[![GitHub license](https://img.shields.io/github/license/idseefeld/Our-Umbraco-DictionaryLocalizer?color=8AB803)](../LICENSE)
+
 This package adds Umbraco-dictionary based localisation e. g. models DataAnnotations.
 
 Just prefix the name or error message with: #
