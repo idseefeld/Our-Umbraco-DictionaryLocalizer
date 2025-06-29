@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContactFormModel>
+@{
+    var submitLabel = Umbraco.GetDictionaryValue("submitLabel", "Senden");
+    var nameLabel = Umbraco.GetDictionaryValue("nameLabel", "Name");
+    var emailLabel = Umbraco.GetDictionaryValue("emailLabel", "E-Mail");
+    var subjectLabel = Umbraco.GetDictionaryValue("subjectLabel", "Betreff");
+    var messageLabel = Umbraco.GetDictionaryValue("messageLabel", "Nachricht");
+}
+@using (Html.BeginUmbracoForm<ContactFormController>(nameof(ContactFormController.HandleSubmit)))
+{
+    <div class="mb-3">
+        <label asp-for="FirstAndLastName" class="form-label"></label>
+        <input asp-for="FirstAndLastName" class="form-control" placeholder="@nameLabel" autocomplete="off" />
+        <span asp-validation-for="FirstAndLastName" class="form-text"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" placeholder="@emailLabel" autocomplete="off" />
+        <span asp-validation-for="Email" class="form-text"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Subject" class="form-label"></label>
+        <input asp-for="Subject" class="form-control" placeholder="@subjectLabel" />
+        <span asp-validation-for="Subject" class="form-text"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Message" class="form-label"></label>
+        <textarea asp-for="Message" class="form-control" placeholder="@messageLabel"></textarea>
+        <span asp-validation-for="Message" class="form-text"></span>
+    </div>
+
+    <div class="mb-3" asp-validation-summary="All"></div>
+
+    <button type="submit" class="btn btn-primary" name="Submit">@submitLabel</button>
+}
