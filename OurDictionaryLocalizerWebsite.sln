@@ -9,11 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{81
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Umbraco11.Website", "Umbraco11.Website\Umbraco11.Website.csproj", "{607FF98B-B030-4A83-8243-AD078E79AEB9}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Umbraco10.Website", "Umbraco10.Website\Umbraco10.Website.csproj", "{917492F8-421C-44D2-A0CD-9CB9D0AE4969}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco10.Core", "Umbraco10.Core\Umbraco10.Core.csproj", "{08084C17-357A-445F-A704-5EED26DED750}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco13.Website", "Umbraco13.Website\Umbraco13.Website.csproj", "{E9E58E7F-D7D1-40A6-81B0-8CC2484AD4D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +17,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{607FF98B-B030-4A83-8243-AD078E79AEB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{607FF98B-B030-4A83-8243-AD078E79AEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{607FF98B-B030-4A83-8243-AD078E79AEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{607FF98B-B030-4A83-8243-AD078E79AEB9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{917492F8-421C-44D2-A0CD-9CB9D0AE4969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{917492F8-421C-44D2-A0CD-9CB9D0AE4969}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{917492F8-421C-44D2-A0CD-9CB9D0AE4969}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{917492F8-421C-44D2-A0CD-9CB9D0AE4969}.Release|Any CPU.Build.0 = Release|Any CPU
-		{08084C17-357A-445F-A704-5EED26DED750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08084C17-357A-445F-A704-5EED26DED750}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08084C17-357A-445F-A704-5EED26DED750}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08084C17-357A-445F-A704-5EED26DED750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9E58E7F-D7D1-40A6-81B0-8CC2484AD4D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9E58E7F-D7D1-40A6-81B0-8CC2484AD4D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9E58E7F-D7D1-40A6-81B0-8CC2484AD4D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9E58E7F-D7D1-40A6-81B0-8CC2484AD4D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
