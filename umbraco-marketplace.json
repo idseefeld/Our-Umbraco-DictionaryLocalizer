@@ -1,8 +1,20 @@
-{
-  "Category": "Translations",
-  "LicenseTypes": [ "Free" ],
+﻿{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "AuthorDetails": {
+    "Name": "Dirk Seefeld",
+    "ImageUrl": "https://github.com/idseefeld.png",
+    "Url": "https://www.idseefeld.de",
+    "SyncContributorsFromRepository": true
+  },
+  "Category": "Developer Tools",
+  "AlternateCategory": "Translations",
+  "LicenseType": "Free",
+  "DocumentationUrl": "https://github.com/idseefeld/Our-Umbraco-DictionaryLocalizer/wiki",
+  "IssueTrackerUrl": "https://github.com/idseefeld/Our-Umbraco-DictionaryLocalizer/issues",
   "PackageType": "Package",
-  "Tags": [
-    "localization"
-  ]
+  "Tags": [ "Developer Tools", "Translations", "Forms", "Data Annotations" ],
+  "Title": "DictionaryLocalizer",
+  "Description": "A package to localize POCO data-annotations Umbraco dictionary items in the backoffice.",
+  "LookingForContributors": true,
+  "VersionDependencyMode": "SemVer"
 }
