@@ -14,7 +14,7 @@
   "PackageType": "Package",
   "Tags": [ "Developer Tools", "Translations", "Forms", "Data Annotations" ],
   "Title": "DictionaryLocalizer",
-  "Description": "A package to localize POCO data-annotations Umbraco dictionary items in the backoffice.",
+  "Description": "A package to localize POCO data-annotations with Umbracos dictionary items in the backoffice.",
   "LookingForContributors": true,
   "VersionDependencyMode": "SemVer"
 }
