@@ -40,7 +40,7 @@ namespace Our.Umbraco.DictionaryLocalizer.Localization
                 var language = languages.FirstOrDefault(l => l.CultureInfo == CultureInfo.CurrentCulture) ?? defaultLanguage;
                 if (language != null)
                 {
-                    var text = item.GetTranslatedValue(language.Id);
+                    var text = item.GetTranslatedValue(language.IsoCode);
                     if (!string.IsNullOrEmpty(text))
                     {
                         notSucceed = false;
@@ -80,7 +80,7 @@ namespace Our.Umbraco.DictionaryLocalizer.Localization
                     var item = _localizationService.GetDictionaryItemByKey(key.Key);
                     if (item != null)
                     {
-                        var text = item.GetTranslatedValue(language.Id);
+                        var text = item.GetTranslatedValue(language.IsoCode);
                         if (!string.IsNullOrEmpty(text))
                         {
                             var ls = new LocalizedString(key.Key, text, false);
