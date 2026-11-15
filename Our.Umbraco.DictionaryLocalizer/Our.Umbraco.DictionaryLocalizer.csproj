@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net11.0</TargetFramework>
-		<Version>1.0.5</Version>
-		<AssemblyVersion>1.0.5</AssemblyVersion>
-		<FileVersion>1.0.5</FileVersion>
+		<VersionPrefix>1.0.5</VersionPrefix>
+		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+		<FileVersion>$(VersionPrefix)</FileVersion>
+		<Version>$(VersionPrefix)-rc1</Version>
 		<ContentTargetFolders>.</ContentTargetFolders>
 		<Product>Our.Umbraco.DictionaryLocalizer</Product>
 		<PackageId>Our.Umbraco.DictionaryLocalizer</PackageId>
@@ -25,6 +26,15 @@
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<PackageReleaseNotes>Full support in Umbarco version 10.8.11. Previous version ignore [Display(Name="#nameLabel")]</PackageReleaseNotes>
 	</PropertyGroup>
+
+	<!-- SourceLink -->
+	<PropertyGroup>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageOutputPath>Z:\nuget.local</PackageOutputPath>
+	</PropertyGroup>
+	
 	<ItemGroup>
 		<Compile Remove="buildTransitive\**" />
 		<EmbeddedResource Remove="buildTransitive\**" />
