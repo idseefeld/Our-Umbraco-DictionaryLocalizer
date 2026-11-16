@@ -481,3 +481,4 @@ appsettings-schema.*.json
 
 Umbraco.sqlite.db-shm
 Umbraco.sqlite.db-wal
+/Umbraco19.Website

@@ -27,19 +27,15 @@ public class MyModel : DictionaryDataAnnotationBaseModel
 }
 ```
 
-In Back-Office section Translations add items: nameLabel, emailLabel, nameRequired, emailInvalid etc.
+In Backoffice section Translations add items: nameLabel, emailLabel, nameRequired, emailInvalid etc.
 
 ## Demo Website
 
-You find a project `Umbraco13.Website` (version 13.9.2) showing a simple form in two languages. Open solution `OurDictionaryLocalizerWebiste.sln`, 
+You find a project `Umbraco17.Website` (version 17.8.1) showing a simple form in two languages. Open solution `OurDictionaryLocalizerWebiste.sln`, 
 select one .Website and run Debug command. 
 The interesting part is in `Models\ContactFormModel.cs`.
 
-When you follow the unattended install as it is configured in appsettings.json, the package will be installed automatically.
-
-**Back-Office login: `admin@example.com` and `1234567890`**
-
-After installition go to settings section open uSync dasboard and install all.
+After installition go to settings section open uSync dashboard and install all.
 
 ## Runtime optimization
 

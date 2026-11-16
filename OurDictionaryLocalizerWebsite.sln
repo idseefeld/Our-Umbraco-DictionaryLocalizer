@@ -1,15 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33110.190
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11806.211
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{815D2E18-EC3F-41CA-B700-07D79D56D2A8}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco13.Website", "Umbraco13.Website\Umbraco13.Website.csproj", "{E9E58E7F-D7D1-40A6-81B0-8CC2484AD4D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco17.Website", "Umbraco17.Website\Umbraco17.Website.csproj", "{B29CCE52-AC5B-4A23-8FA2-278EDB47D30A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco18.Website", "Umbraco18.Website\Umbraco18.Website.csproj", "{A44D8C9E-3C40-4269-A19D-25CED72B7C16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.DictionaryLocalizer", "Our.Umbraco.DictionaryLocalizer.RCL\Our.Umbraco.DictionaryLocalizer.csproj", "{BF374E4C-61B7-4934-BB30-836989029B70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +22,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E9E58E7F-D7D1-40A6-81B0-8CC2484AD4D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9E58E7F-D7D1-40A6-81B0-8CC2484AD4D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9E58E7F-D7D1-40A6-81B0-8CC2484AD4D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9E58E7F-D7D1-40A6-81B0-8CC2484AD4D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B29CCE52-AC5B-4A23-8FA2-278EDB47D30A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29CCE52-AC5B-4A23-8FA2-278EDB47D30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29CCE52-AC5B-4A23-8FA2-278EDB47D30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29CCE52-AC5B-4A23-8FA2-278EDB47D30A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A44D8C9E-3C40-4269-A19D-25CED72B7C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A44D8C9E-3C40-4269-A19D-25CED72B7C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A44D8C9E-3C40-4269-A19D-25CED72B7C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A44D8C9E-3C40-4269-A19D-25CED72B7C16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF374E4C-61B7-4934-BB30-836989029B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF374E4C-61B7-4934-BB30-836989029B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF374E4C-61B7-4934-BB30-836989029B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF374E4C-61B7-4934-BB30-836989029B70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
