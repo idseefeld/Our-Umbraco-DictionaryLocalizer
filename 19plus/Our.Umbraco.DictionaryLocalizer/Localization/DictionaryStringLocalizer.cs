@@ -38,9 +38,9 @@ namespace Our.Umbraco.DictionaryLocalizer.Localization
             if (item != null)
             {
                 var languages = _languageService.GetAllAsync().Result;
-                var currentCulture = System.Threading.Thread.CurrentThread.CurrentCulture;
+                var currentCulture = Thread.CurrentThread.CurrentCulture;
                 var defaultLanguage = languages.FirstOrDefault(l => l.Id == (_languageService.GetDefaultLanguageAsync().Result?.Id ?? -1));
-                var language = languages.FirstOrDefault(l => l.CultureInfo.Name == currentCulture.Name) ?? defaultLanguage;
+                var language = languages.FirstOrDefault(l => l.CultureInfo?.Name == currentCulture.Name) ?? defaultLanguage;
                 if (language != null)
                 {
                     var text = item.GetTranslatedValue(language.IsoCode);
