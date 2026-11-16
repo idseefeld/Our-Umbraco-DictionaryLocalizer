@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Threading;
 using Umbraco.Cms.Core.Services;
 using Umbraco.Extensions;
 
@@ -10,10 +11,12 @@ namespace Our.Umbraco.DictionaryLocalizer.Localization
 {
     public class DictionaryStringLocalizer : IStringLocalizer
     {
-        private readonly ILocalizationService _localizationService;
-        public DictionaryStringLocalizer(ILocalizationService localizationService)
+        private readonly ILanguageService _languageService;
+        private readonly IDictionaryItemService _dictionaryItemService;
+        public DictionaryStringLocalizer(ILanguageService languageService, IDictionaryItemService dictionaryItemService)
         {
-            _localizationService = localizationService;
+            _languageService = languageService;
+            _dictionaryItemService = dictionaryItemService;
         }
         public LocalizedString this[string name]
         {
@@ -32,12 +35,13 @@ namespace Our.Umbraco.DictionaryLocalizer.Localization
 
             var key = name[1..];
             rVal = key;
-            var item = _localizationService.GetDictionaryItemByKey(key);
+            var item = _dictionaryItemService.GetAsync(key).Result;
             if (item != null)
             {
-                var languages = _localizationService.GetAllLanguages();
-                var defaultLanguage = languages.FirstOrDefault(l => l.Id == (_localizationService.GetDefaultLanguageId() ?? -1));
-                var language = languages.FirstOrDefault(l => l.CultureInfo == CultureInfo.CurrentCulture) ?? defaultLanguage;
+                var languages = _languageService.GetAllAsync().Result;
+                var currentCulture = Thread.CurrentThread.CurrentCulture;
+                var defaultLanguage = languages.FirstOrDefault(l => l.Id == (_languageService.GetDefaultLanguageAsync().Result?.Id ?? -1));
+                var language = languages.FirstOrDefault(l => l.CultureInfo?.Name == currentCulture.Name) ?? defaultLanguage;
                 if (language != null)
                 {
                     var text = item.GetTranslatedValue(language.IsoCode);
@@ -66,24 +70,24 @@ namespace Our.Umbraco.DictionaryLocalizer.Localization
         {
             var rVal = new List<LocalizedString>();
 
-            var languages = _localizationService.GetAllLanguages();
+            var languages = _languageService.GetAllAsync().Result;
             var language = languages.FirstOrDefault(l => l.CultureInfo == CultureInfo.CurrentCulture);
             if (language == null && includeParentCultures)
             {
-                language = languages.FirstOrDefault(l => l.Id == (_localizationService.GetDefaultLanguageId() ?? -1));
+                language = languages.FirstOrDefault(l => l.Id == (_languageService.GetDefaultLanguageAsync().Result?.Id ?? -1));
             }
             if (language != null)
             {
-                var keyMap = _localizationService.GetDictionaryItemKeyMap();
-                foreach (var key in keyMap)
+                var allDictEntries = _dictionaryItemService.GetPagedAsync(null, 0, 10000).Result;
+                foreach (var entry in allDictEntries.Items)
                 {
-                    var item = _localizationService.GetDictionaryItemByKey(key.Key);
+                    var item = _dictionaryItemService.GetAsync(entry.Key).Result;
                     if (item != null)
                     {
                         var text = item.GetTranslatedValue(language.IsoCode);
                         if (!string.IsNullOrEmpty(text))
                         {
-                            var ls = new LocalizedString(key.Key, text, false);
+                            var ls = new LocalizedString(item.ItemKey, text, false);
                             rVal.Add(ls);
                         }
                     }

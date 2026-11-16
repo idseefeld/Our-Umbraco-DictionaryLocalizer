@@ -5,21 +5,21 @@ namespace Umbraco17.Website.Models
 {
     public class ContactFormModel : DictionaryDataAnnotationBaseModel
     {
-        [Required(ErrorMessage = "#RequiredErrorMessage.name")]
         [Display(Name = "#nameLabel")]
+        [Required(ErrorMessage = "#RequiredErrorMessage")]
         public string? FirstAndLastName { get; set; }
 
-        [Required(ErrorMessage = "#RequiredErrorMessage.email")]
-        [EmailAddress(ErrorMessage = "#InvalidErrorMessage.email")]
         [Display(Name = "#emailLabel")]
+        [Required(ErrorMessage = "#RequiredErrorMessage")]
+        [EmailAddress(ErrorMessage = "#InvalidErrorMessage")]
         public string? Email { get; set; }
 
         [Display(Name = "#subjectLabel")]
-        [Required(ErrorMessage = "#RequiredErrorMessage.subject")]
+        [Required(ErrorMessage = "#RequiredErrorMessage")]
         public string? Subject { get; set; }
 
         [Display(Name = "#messageLabel")]
-        [Required(ErrorMessage = "#RequiredErrorMessage.message")]
+        [Required(ErrorMessage = "#RequiredErrorMessage")]
         public string? Message { get; set; }
     }
 }

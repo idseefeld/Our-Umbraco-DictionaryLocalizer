@@ -27,7 +27,7 @@ public class MyModel : DictionaryDataAnnotationBaseModel
 }
 ```
 
-In Back-Office section Translations add items: nameLabel, emailLabel, nameRequired, emailInvalid etc.
+In Backoffice section Translations add items: nameLabel, emailLabel, nameRequired, emailInvalid etc.
 
 ## Demo Website
 
@@ -37,7 +37,7 @@ The interesting part is in `Models\ContactFormModel.cs`.
 
 When you follow the unattended install as it is configured in appsettings.json, the package will be installed automatically.
 
-**Back-Office login: `admin@example.com` and `1234567890`**
+**Backoffice login: `admin@example.com` and `1234567890`**
 
 After installition go to settings section open uSync dasboard and install all.
 

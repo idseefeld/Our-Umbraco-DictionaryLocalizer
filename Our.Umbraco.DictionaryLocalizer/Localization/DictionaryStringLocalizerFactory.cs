@@ -9,12 +9,15 @@ namespace Our.Umbraco.DictionaryLocalizer.Localization
 {
     public class DictionaryStringLocalizerFactory : IStringLocalizerFactory
     {
-        private readonly ILocalizationService _localizationService;
+        private readonly ILanguageService _languageService;
+        private readonly IDictionaryItemService _dictionaryItemService;
+
         private static readonly ConcurrentDictionary<string, IStringLocalizer> _resourceLocalizations = new();
         private readonly IOptions<DictionaryLocalizationOptions> _options;
-        public DictionaryStringLocalizerFactory(ILocalizationService localizationService, IOptions<DictionaryLocalizationOptions> options)
+        public DictionaryStringLocalizerFactory(ILanguageService languageService, IDictionaryItemService dictionaryItemService, IOptions<DictionaryLocalizationOptions> options)
         {
-            _localizationService = localizationService;
+            _languageService = languageService;
+            _dictionaryItemService = dictionaryItemService;
             _options = options;
         }
         public IStringLocalizer Create(Type resourceSource)
@@ -35,7 +38,7 @@ namespace Our.Umbraco.DictionaryLocalizer.Localization
 
             _resourceLocalizations.TryGetValue(resourceSource.Name, out IStringLocalizer existing);
             if (existing != null) return existing;
-            DictionaryStringLocalizer stringLocalizer = new(_localizationService);
+            DictionaryStringLocalizer stringLocalizer = new(_languageService, _dictionaryItemService);
 
             return _resourceLocalizations.GetOrAdd(resourceSource.Name, stringLocalizer);
         }

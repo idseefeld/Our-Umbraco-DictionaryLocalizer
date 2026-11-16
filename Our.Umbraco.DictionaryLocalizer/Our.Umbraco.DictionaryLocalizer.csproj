@@ -1,6 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net10.0</TargetFramework>
+		<VersionPrefix>17.8.1</VersionPrefix>
+		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+		<FileVersion>$(VersionPrefix)</FileVersion>
+		<Version>$(VersionPrefix)</Version>
 		<ContentTargetFolders>.</ContentTargetFolders>
 		<Product>Our.Umbraco.DictionaryLocalizer</Product>
 		<PackageId>Our.Umbraco.DictionaryLocalizer</PackageId>
@@ -18,18 +22,24 @@
 		<Authors>Dirk Seefeld</Authors>
 		<PackageIcon>languages.png</PackageIcon>
 		<RepositoryType>git</RepositoryType>
-		<Copyright>Copyright (c) 2025, Dirk Seefeld</Copyright>
+		<Copyright>Copyright (c) 2026, Dirk Seefeld</Copyright>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-		<AssemblyVersion>1.0.5</AssemblyVersion>
-		<FileVersion>1.0.5</FileVersion>
-		<Version>1.0.5</Version>
-		<PackageReleaseNotes>Full support in Umbarco version 10.8.11. Previous version ignore [Display(Name="#nameLabel")]</PackageReleaseNotes>
 	</PropertyGroup>
+
+	<!-- SourceLink -->
+	<PropertyGroup>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageOutputPath>Z:\nuget.local</PackageOutputPath>
+	</PropertyGroup>
+	
 	<ItemGroup>
 		<Compile Remove="buildTransitive\**" />
 		<EmbeddedResource Remove="buildTransitive\**" />
 		<None Remove="buildTransitive\**" />
 	</ItemGroup>
+	
 	<ItemGroup>
 		<None Include="..\languages.png">
 			<Pack>True</Pack>
@@ -48,10 +58,9 @@
 			<PackagePath>\</PackagePath>
 		</None>
 	</ItemGroup>
+	
 	<ItemGroup>
-		<PackageReference Include="Umbraco.Cms.Web.Website" Version="[17.0.0,18.0.0)" />
+		<PackageReference Include="Umbraco.Cms.Web.Website" Version="[17.8.1,18.0.0)" />
 	</ItemGroup>
-	<!--<ItemGroup>
-		<None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
-	</ItemGroup>-->
+	
 </Project>
