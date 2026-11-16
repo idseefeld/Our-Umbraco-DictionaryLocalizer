@@ -41,6 +41,10 @@ namespace Umbraco19.Website.Controllers
             {
                 return RedirectToUmbracoPage(CurrentPage.Children().First());
             }
+            else
+            {
+                TempData["SubmitSuccess"] = true;
+            }
 
             return RedirectToCurrentUmbracoPage();
         }

@@ -1,11 +1,13 @@
-﻿@using Umbraco.Cms.Core.PublishedCache;
-@using Umbraco.Cms.Web.Common.PublishedModels;
-@using ContentModels = Umbraco19.Website.Models;
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<SimplePage>
 @{
     Layout = "Master.cshtml";
 
     var formModel = new ContactFormModel();
+
+    var message = TempData["SubmitSuccess"] as bool? ?? false
+        ? Umbraco.GetDictionaryValueOrDefault("formSuccessResponse", "Thank You!")
+        : null;
 }
 <div class="container-fluid">
 
@@ -15,8 +17,21 @@
 
     </div>
 
-    <div>
-        @await Html.PartialAsync("ContactFormView", formModel)
-    </div>
+    @if (!string.IsNullOrEmpty(message))
+    {
+        <div class="alert alert-success" role="alert">
+            @message
+        </div>
+    }
+    else
+    {
+
+        @if (Model.IsContactForm)
+        {
+            <div>
+                @await Html.PartialAsync("ContactFormView", formModel)
+            </div>
+        }
+    }
 
 </div>

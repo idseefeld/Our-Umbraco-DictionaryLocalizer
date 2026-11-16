@@ -25,6 +25,8 @@
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<StaticWebAssetBasePath>\</StaticWebAssetBasePath>
+		<RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace(".pack", ""))</RootNamespace>
 	</PropertyGroup>
 
 	<!-- SourceLink -->
@@ -70,6 +72,12 @@
 		<Folder Include="wwwroot\App_Plugins\Our.Umbraco.DictionaryLocalizer\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Content Update="wwwroot\App_Plugins\Our.Umbraco.DictionaryLocalizer\umbraco-package.json">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
 	<!-- Synchronize Umbraco Package Version build task from Directory.Build.props to umbraco-package.json -->
 	<UsingTask TaskName="SynchronizeUmbracoPackageVersion" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
 		<ParameterGroup>
@@ -109,12 +117,8 @@
 		</Task>
 	</UsingTask>
 
-	<Target Name="SynchronizeUmbracoPackageManifestVersion"
-			BeforeTargets="PrepareForBuild;ResolveStaticWebAssetsInputs;GenerateNuspec"
-			Condition="'$(DesignTimeBuild)' != 'true'">
-		<SynchronizeUmbracoPackageVersion
-		  ManifestPath="$(MSBuildProjectDirectory)\wwwroot\App_Plugins\$(PackageId)\umbraco-package.json"
-		  Version="$(Version)" />
+	<Target Name="SynchronizeUmbracoPackageManifestVersion" BeforeTargets="PrepareForBuild;ResolveStaticWebAssetsInputs;GenerateNuspec" Condition="'$(DesignTimeBuild)' != 'true'">
+		<SynchronizeUmbracoPackageVersion ManifestPath="$(MSBuildProjectDirectory)\wwwroot\App_Plugins\$(PackageId)\umbraco-package.json" Version="$(Version)" />
 	</Target>
 
 </Project>
