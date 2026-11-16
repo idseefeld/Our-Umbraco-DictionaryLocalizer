@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net10.0</TargetFramework>
-		<VersionPrefix>17.8.1</VersionPrefix>
+		<VersionPrefix>17.9.0</VersionPrefix>
 		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
 		<FileVersion>$(VersionPrefix)</FileVersion>
 		<Version>$(VersionPrefix)</Version>
@@ -60,7 +60,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="Umbraco.Cms.Web.Website" Version="[17.8.1,18.0.0)" />
+		<PackageReference Include="Umbraco.Cms.Web.Website" Version="[17.8.1,19.0.0)" />
 	</ItemGroup>
 	
 </Project>

@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{81
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco17.Website", "Umbraco17.Website\Umbraco17.Website.csproj", "{B29CCE52-AC5B-4A23-8FA2-278EDB47D30A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.DictionaryLocalizer", "Our.Umbraco.DictionaryLocalizer\Our.Umbraco.DictionaryLocalizer.csproj", "{9F29A774-D84F-0D24-042E-777EA44311D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco18.Website", "Umbraco18.Website\Umbraco18.Website.csproj", "{A44D8C9E-3C40-4269-A19D-25CED72B7C16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.DictionaryLocalizer", "Our.Umbraco.DictionaryLocalizer.RCL\Our.Umbraco.DictionaryLocalizer.csproj", "{BF374E4C-61B7-4934-BB30-836989029B70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,10 +26,14 @@ Global
 		{B29CCE52-AC5B-4A23-8FA2-278EDB47D30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B29CCE52-AC5B-4A23-8FA2-278EDB47D30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B29CCE52-AC5B-4A23-8FA2-278EDB47D30A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F29A774-D84F-0D24-042E-777EA44311D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F29A774-D84F-0D24-042E-777EA44311D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F29A774-D84F-0D24-042E-777EA44311D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F29A774-D84F-0D24-042E-777EA44311D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A44D8C9E-3C40-4269-A19D-25CED72B7C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A44D8C9E-3C40-4269-A19D-25CED72B7C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A44D8C9E-3C40-4269-A19D-25CED72B7C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A44D8C9E-3C40-4269-A19D-25CED72B7C16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF374E4C-61B7-4934-BB30-836989029B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF374E4C-61B7-4934-BB30-836989029B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF374E4C-61B7-4934-BB30-836989029B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF374E4C-61B7-4934-BB30-836989029B70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
