@@ -37,7 +37,7 @@ The interesting part is in `Models\ContactFormModel.cs`.
 
 When you follow the unattended install as it is configured in appsettings.json, the package will be installed automatically.
 
-**Back-Office login: `admin@example.com` and `1234567890`**
+**Back-Office login: `admin@admin.com` and `adminadmin`**
 
 After installition go to settings section open uSync dasboard and install all.
 

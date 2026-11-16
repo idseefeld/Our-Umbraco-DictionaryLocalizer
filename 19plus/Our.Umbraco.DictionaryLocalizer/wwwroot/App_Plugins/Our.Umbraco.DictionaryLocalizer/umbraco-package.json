@@ -1,0 +1,7 @@
+{
+  "id": "Our.Umbraco.DictionaryLocalizer",
+  "name": "Our.Umbraco.DictionaryLocalizer",
+  "version": "19.0.0-rc1",
+  "allowPackageTelemetry": true,
+  "extensions": []
+}
